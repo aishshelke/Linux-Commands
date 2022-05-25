@@ -2,41 +2,25 @@
 
 
 1 Login to super user :Su -
-2
-Login to normal user from super user
-1.exit
-2.su -l  <username>
+2 Login to normal user from super user : 1.exit
+                                       : 2.su -l  <username>
+ 
+3.Create new directory : Mkdir <directory_name>
 
-3.
-Create new directory
-Mkdir <directory_name>
+4 Create new file : 1.Touch <filename> 
+                  : 2.Vim <filename>
 
-4
-Create new file
-1.Touch <filename> 
-2.Vim <filename>
+5 Append content to exiting file : CAT>C1 |ECHOâ€this isâ€
 
-5
-Append content to exiting file
-CAT>C1 |ECHO”this is”
-
-6
-Create directory inside directory
-Mkdir -p dir1/dir2
+6 Create directory inside directory : Mkdir -p dir1/dir2
 
 
-7
-How to get present working directory address
-Pwd
+7 How to get present working directory address : Pwd
 
-8
-Get list of dir or files
-Ls
+8 Get list of dir or files :Ls
 
-9
-Get details of dir or files
-Ls -l
-Ll
+9 Get details of directory or files: 1.Ls -l
+                                   : 2.Ll
 
 10
 Copy files from one dir to other
@@ -48,7 +32,7 @@ Mv <source_add><dest_add>
 
 12
 Get help or manual page of particular command
-Command –help
+Command â€“help
 Man command
 
 13

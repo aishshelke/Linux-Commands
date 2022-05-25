@@ -154,8 +154,6 @@ mount
 Get ip address
 Ifconfig
 
-41
-
 
 
 

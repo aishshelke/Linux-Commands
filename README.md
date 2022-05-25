@@ -1,13 +1,18 @@
 # Linux-Commands
 
 
-1 Login to super user :Su -
+1 Login to super user :
 
-2 Login to normal user from super user : 1.exit
+                        Su -
 
-                                       : 2.su -l  <username>
+2 Login to normal user from super user :
+
+                                        1.exit
+                                        2.su -l  <username>
  
-3.Create new directory : Mkdir <directory_name>
+3.Create new directory :
+
+            Mkdir <directory_name>
 
 4 Create new file : 1.Touch <filename> 
   

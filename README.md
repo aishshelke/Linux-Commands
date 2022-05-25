@@ -2,12 +2,15 @@
 
 
 1 Login to super user :Su -
+
 2 Login to normal user from super user : 1.exit
+
                                        : 2.su -l  <username>
  
 3.Create new directory : Mkdir <directory_name>
 
 4 Create new file : 1.Touch <filename> 
+  
                   : 2.Vim <filename>
 
 5 Append content to exiting file : CAT>C1 |ECHO”this is”
@@ -20,6 +23,7 @@
 8 Get list of dir or files :Ls
 
 9 Get details of directory or files: 1.Ls -l
+  
                                    : 2.Ll
 
 10

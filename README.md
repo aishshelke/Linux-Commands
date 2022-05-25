@@ -91,84 +91,102 @@
 
                                           Yum install
 
-22
-Check permissions to the file or dir
-chmod
+22Check permissions to the file or dir
+  
+                                          chmod
 
 23
 To remove file or directory
-Rm
+
+                                            Rm
 
 24
 To search file in system
-Find
-Locate
+
+                                          Find
+                                          Locate
 
 25
 To manage network
-nmcli
+
+                                          nmcli
 
 26
 Move data to text file
-Echo
+
+                                          Echo
 
 27
 Used to display content of file
-Cat
+
+                                          Cat
 
 28
 superuser do
-sudo
+
+                                          sudo
 
 29
 To check disk space available
-Df
+
+                                             Df
 
 30
 To know disk usage
-Du
+
+                                            Du
 
 31
 To check your name
-hostname
+
+                                            hostname
 
 32
 To check connection to server
-Ping
+
+                                             Ping
 
 33
 To reboot computer
-Sudo halt
-Sudo reboot
+  
+                                              Sudo halt
+                                              Sudo reboot
 
 34
 Clear the screen
-Clear
-Cntrl+l
+
+                                              Clear
+                                              Cntrl+l
 
 35
 Fill up the terminal
-TAB
+
+                                              TAB
 
 36
 TO DISPlay data or time
-Date
+
+                                                  Date
 
 37
 Current months cal with todays date
-Cal
+
+                                                Cal
 
 38
 Compressed file
-Zcat
+
+                                              Zcat
 
 39
 To connect ecternal device file system to system file
-mount
+
+                                                mount
 
 40
 Get ip address
-Ifconfig
+
+                                              Ifconfig
 
 
 

@@ -3,7 +3,7 @@
 
 1 Login to super user :
 
-                        Su -
+                                         Su -
 
 2 Login to normal user from super user :
 
@@ -12,28 +12,38 @@
  
 3.Create new directory :
 
-            Mkdir <directory_name>
+                                        Mkdir <directory_name>
 
-4 Create new file : 1.Touch <filename> 
+4 Create new file : 
+                  
+                                        1.Touch <filename> 
+                                        2.Vim <filename>
+
+5 Append content to exiting file 
+
+                                        CAT>C1 |ECHO”this is”
+
+6 Create directory inside directory 
+            
+                                        Mkdir -p dir1/dir2
+
+
+7 How to get present working directory address 
   
-                  : 2.Vim <filename>
+                                        Pwd
 
-5 Append content to exiting file : CAT>C1 |ECHO”this is”
-
-6 Create directory inside directory : Mkdir -p dir1/dir2
-
-
-7 How to get present working directory address : Pwd
-
-8 Get list of dir or files :Ls
-
-9 Get details of directory or files: 1.Ls -l
+8 Get list of dir or files 
   
-                                   : 2.Ll
+                                        Ls
 
-10
-Copy files from one dir to other
-Cp <source_add> <destion_add>
+9 Get details of directory or files:
+
+                                        1.Ls -l  
+                                        2.Ll
+
+10 Copy files from one dir to other
+
+                                        Cp <source_add> <destion_add>
 
 11
 Move file from one directory to other

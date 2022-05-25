@@ -45,50 +45,51 @@
 
                                         Cp <source_add> <destion_add>
 
-11
-Move file from one directory to other
-Mv <source_add><dest_add>
+11 Move file from one directory to other
 
-12
-Get help or manual page of particular command
-Command –help
-Man command
+                                        Mv <source_add><dest_add>
 
-13
-Get into particular directory
-Cd <dir_name>
+12 Get help or manual page of particular command
 
-14
-Get out of dir
-Cd ..
+                                          Command –help
+                                          Man command
 
-15
-To know if it is file or directory
-File pop
+13 Get into particular directory
 
-16
-Copy dir to super directory
-Cp -r test2 super/
+                                          Cd <dir_name>
 
-17
-Create file c1 with content
-Nano c1
+14 Get out of dir
 
-18
-How to download smthng using command
-W get <file_name>
+                                          Cd ..
 
-19
-Search perticluar file 
-grip
+15 To know if it is file or directory
 
-20
-Check systems runtime
-System uptime
+                                          File pop
 
-21
-Install package
-Yum install
+16 Copy dir to super directory
+
+                                          Cp -r test2 super/
+
+17 Create file c1 with content
+
+                                          Nano c1
+
+18 How to download smthng using command
+
+                                          W get <file_name>
+
+19 Search perticluar file 
+
+
+                                          grip
+
+20  Check systems runtime
+
+                                          System uptime
+
+21 Install package
+
+                                          Yum install
 
 22
 Check permissions to the file or dir

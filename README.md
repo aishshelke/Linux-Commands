@@ -1,367 +1,183 @@
-# Linux-Commands
-
-
-1 Login to super user :
-
-                                         Su -
-
-2 Login to normal user from super user :
-
-                                        1.exit
-                                        2.su -l  <username>
- 
-3.Create new directory :
-
-                                        Mkdir <directory_name>
-
-4 Create new file : 
-                  
-                                        1.Touch <filename> 
-                                        2.Vim <filename>
-
-5 Append content to exiting file 
-
-                                        CAT>C1 |ECHO”this is”
-
-6 Create directory inside directory 
-            
-                                        Mkdir -p dir1/dir2
-
-
-7 How to get present working directory address 
-  
-                                        Pwd
-
-8 Get list of dir or files 
-  
-                                        Ls
-
-9 Get details of directory or files:
-
-                                        1.Ls -l  
-                                        2.Ll
-
-10 Copy files from one dir to other
-
-                                        Cp <source_add> <destion_add>
-
-11 Move file from one directory to other
-
-                                        Mv <source_add><dest_add>
-
-12 Get help or manual page of particular command
-
-                                          Command –help
-                                          Man command
-
-13 Get into particular directory
-
-                                          Cd <dir_name>
-
-14 Get out of dir
-
-                                          Cd ..
-
-15 To know if it is file or directory
-
-                                          File pop
-
-16 Copy dir to super directory
-
-                                          Cp -r test2 super/
-
-17 Create file c1 with content
-
-                                          Nano c1
-
-18 How to download smthng using command
-
-                                          W get <file_name>
-
-19 Search perticluar file 
-
-
-                                          grip
-
-20  Check systems runtime
-
-                                          System uptime
-
-21 Install package
-
-                                          Yum install
-
-22Check permissions to the file or dir
-  
-                                          chmod
-
-23
-To remove file or directory
-
-                                            Rm
-
-24
-To search file in system
-
-                                          Find
-                                          Locate
-
-25
-To manage network
-
-                                          nmcli
-
-26
-Move data to text file
-
-                                          Echo
-
-27
-Used to display content of file
-
-                                          Cat
-
-28
-superuser do
-
-                                          sudo
-
-29
-To check disk space available
-
-                                             Df
-
-30
-To know disk usage
-
-                                            Du
-
-31
-To check your name
-
-                                            hostname
-
-32
-To check connection to server
-
-                                             Ping
-
-33
-To reboot computer
-  
-                                              Sudo halt
-                                              Sudo reboot
-
-34
-Clear the screen
-
-                                              Clear
-                                              Cntrl+l
-
-35
-Fill up the terminal
-
-                                              TAB
-
-36
-TO DISPlay data or time
-
-                                                  Date
-
-37
-Current months cal with todays date
-
-                                                Cal
-
-38
-Compressed file
-
-                                              Zcat
-
-39
-To connect ecternal device file system to system file
-
-                                                mount
-
-40
-Get ip address
-
-                                              Ifconfig
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Basic Commands
+File and Directory Operations
+
+ls:
+                       List directory contents.
+cd [directory]:
+                       Change directory.
+pwd:
+                       Print working directory.
+mkdir [directory]:
+                       Make a new directory.
+rmdir [directory]:
+                       Remove an empty directory.
+rm [file]:
+                       Remove a file.
+cp [source] [destination]:
+                       Copy files or directories.
+mv [source] [destination]:
+                       Move or rename files or directories.
+File Viewing and Editing
+
+cat [file]:
+                       Concatenate and display file content.
+more [file]:
+                       View file content one screen at a time.
+less [file]:
+                       View file content with backward navigation.
+head [file]:
+                       Show the first few lines of a file.
+tail [file]:
+                       Show the last few lines of a file.
+nano [file]:
+                       Edit files with the Nano editor.
+vim [file]:
+                       Edit files with the Vim editor.
+
+Permissions and Ownership
+
+chmod [permissions] [file]:
+                       Change file permissions.
+chown [owner]:
+                      [group] [file]:
+                       Change file ownership.
+chgrp [group] [file]:
+                       Change file group.
+System Information
+
+date:
+                       Display or set the system date and time.
+uptime:
+                       Show how long the system has been running.
+top:
+                       Display a dynamic view of system processes.
+df -h:
+                       Show disk space usage.
+du -sh [directory]:
+                       Show disk usage of a directory.
+Process Management
+
+ps:
+                       Display a snapshot of current processes.
+top:
+                       Display real-time process information.
+kill [PID]:
+                       Terminate a process by its PID.
+killall [name]:
+                       Terminate processes by name.
+pkill [name]:
+                       Kill processes by name.
+
+
+Intermediate Commands
+
+
+File Search and Manipulation
+
+find [directory] -name [name]:
+                       Search for files by name.
+grep [pattern] [file]:
+                       Search for text patterns within files.
+locate [name]:
+                       Find files by name quickly using a database.
+xargs [command]:
+                       Build and execute command lines from standard input.
+Network Commands
+
+ping [host]:
+                       Send ICMP ECHO_REQUEST to network hosts.
+ifconfig:
+                       Display or configure network interfaces.
+ip [option]:
+                       Show/manipulate routing, devices, policy routing, and tunnels.
+netstat -tuln:
+                       Show active listening ports.
+ss -tuln:
+                       Another utility to investigate network connections.
+Archiving and Compression
+
+tar -cvf [archive.tar] [file/directory]:
+                       Create a tarball archive.
+tar -xvf [archive.tar]:
+                       Extract a tarball archive.
+gzip [file]:
+                       Compress files using gzip.
+gunzip [file.gz]:
+                       Decompress files using gzip.
+zip [archive.zip] [file/directory]:
+                       Create a ZIP archive.
+unzip [archive.zip]:
+                       Extract a ZIP archive.
+Disk Management
+
+fdisk -l:
+                       List disk partitions.
+mkfs [filesystem] [device]:
+                       Create a filesystem on a device.
+mount [device] [mount_point]:
+                       Mount a filesystem.
+umount [mount_point]:
+                       Unmount a filesystem.
+User Management
+
+useradd [username]:
+                       Add a new user.
+usermod [options] [username]:
+                       Modify user account properties.
+passwd [username]:
+                       Change user password.
+groupadd [groupname]:
+                       Add a new group.
+gpasswd -a [user] [group]:
+                       Add a user to a group.
+Advanced Commands
+System Monitoring and Performance
+
+iostat:
+                       Report CPU and I/O statistics.
+vmstat:
+                       Report virtual memory statistics.
+sar:
+                       Collect and report system activity information.
+htop:
+                       Interactive process viewer (requires installation).
+Process Control
+
+nohup [command] &:
+                       Run a command immune to hangups, with output to a non-tty.
+bg:
+                       Resume a suspended job in the background.
+fg:
+                       Bring a job to the foreground.
+Package Management (for various distributions)
+
+Debian/Ubuntu:
+                       apt-get [command] or apt [command]
+RedHat/CentOS/Fedora:
+                       yum [command] or dnf [command]
+Arch Linux:
+                       pacman -S [package]
+System Configuration
+
+sysctl -a:
+                       Display or set kernel parameters.
+systemctl [command]:
+                       Manage systemd services.
+journalctl:
+                       View and query systemd logs.
+Advanced File Operations
+
+rsync -avz [source] [destination]:
+                       Synchronize files/directories between locations.
+dd if=[source] of=[destination] bs=[blocksize]:
+                       Convert and copy files.
+Networking and Security
+
+iptables -L:
+                       List IP tables rules.
+ufw [command]:
+                       Uncomplicated Firewall management (Ubuntu/Debian).
+ssh [user@host]:
+                       Securely connect to a remote machine via SSH.
+scp [source] [user@host:destination]:
+                       Securely copy files between hosts.

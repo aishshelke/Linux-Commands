@@ -3,8 +3,10 @@ File and Directory Operations
 
 ls:
                        List directory contents.
+
 cd [directory]:
                        Change directory.
+                       
 pwd:
                        Print working directory.
 mkdir [directory]:

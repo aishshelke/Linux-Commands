@@ -1,185 +1,499 @@
-Basic Commands
-File and Directory Operations
+Comprehensive Linux Commands Cheat Sheet 🐧
 
-ls:
-                       List directory contents.
+A complete reference guide for Linux command-line operations, categorized from basic file management to advanced system administration. Designed for easy reference on GitHub.
 
-cd [directory]:
-                       Change directory.
-                       
-pwd:
-                       Print working directory.
-mkdir [directory]:
-                       Make a new directory.
-rmdir [directory]:
-                       Remove an empty directory.
-rm [file]:
-                       Remove a file.
-cp [source] [destination]:
-                       Copy files or directories.
-mv [source] [destination]:
-                       Move or rename files or directories.
-File Viewing and Editing
+📋 Table of Contents
 
-cat [file]:
-                       Concatenate and display file content.
-more [file]:
-                       View file content one screen at a time.
-less [file]:
-                       View file content with backward navigation.
-head [file]:
-                       Show the first few lines of a file.
-tail [file]:
-                       Show the last few lines of a file.
-nano [file]:
-                       Edit files with the Nano editor.
-vim [file]:
-                       Edit files with the Vim editor.
+User Management & Privileges
 
-Permissions and Ownership
+File & Directory Operations
 
-chmod [permissions] [file]:
-                       Change file permissions.
-chown [owner]:
-                      [group] [file]:
-                       Change file ownership.
-chgrp [group] [file]:
-                       Change file group.
-System Information
+File Viewing & Editing
 
-date:
-                       Display or set the system date and time.
-uptime:
-                       Show how long the system has been running.
-top:
-                       Display a dynamic view of system processes.
-df -h:
-                       Show disk space usage.
-du -sh [directory]:
-                       Show disk usage of a directory.
-Process Management
+Permissions & Ownership
 
-ps:
-                       Display a snapshot of current processes.
-top:
-                       Display real-time process information.
-kill [PID]:
-                       Terminate a process by its PID.
-killall [name]:
-                       Terminate processes by name.
-pkill [name]:
-                       Kill processes by name.
+Searching & Text Manipulation
 
+Archiving & Compression
 
-Intermediate Commands
+System Information & Monitoring
 
+Process Management & Control
 
-File Search and Manipulation
+Networking & Remote Access
 
-find [directory] -name [name]:
-                       Search for files by name.
-grep [pattern] [file]:
-                       Search for text patterns within files.
-locate [name]:
-                       Find files by name quickly using a database.
-xargs [command]:
-                       Build and execute command lines from standard input.
-Network Commands
+Disk Management & Filesystems
 
-ping [host]:
-                       Send ICMP ECHO_REQUEST to network hosts.
-ifconfig:
-                       Display or configure network interfaces.
-ip [option]:
-                       Show/manipulate routing, devices, policy routing, and tunnels.
-netstat -tuln:
-                       Show active listening ports.
-ss -tuln:
-                       Another utility to investigate network connections.
-Archiving and Compression
+Package Management
 
-tar -cvf [archive.tar] [file/directory]:
-                       Create a tarball archive.
-tar -xvf [archive.tar]:
-                       Extract a tarball archive.
-gzip [file]:
-                       Compress files using gzip.
-gunzip [file.gz]:
-                       Decompress files using gzip.
-zip [archive.zip] [file/directory]:
-                       Create a ZIP archive.
-unzip [archive.zip]:
-                       Extract a ZIP archive.
-Disk Management
+System Configuration & Services
 
-fdisk -l:
-                       List disk partitions.
-mkfs [filesystem] [device]:
-                       Create a filesystem on a device.
-mount [device] [mount_point]:
-                       Mount a filesystem.
-umount [mount_point]:
-                       Unmount a filesystem.
-User Management
+Terminal & Utility Shortcuts
 
-useradd [username]:
-                       Add a new user.
-usermod [options] [username]:
-                       Modify user account properties.
-passwd [username]:
-                       Change user password.
-groupadd [groupname]:
-                       Add a new group.
-gpasswd -a [user] [group]:
-                       Add a user to a group.
-Advanced Commands
-System Monitoring and Performance
+1. User Management & Privileges
 
-iostat:
-                       Report CPU and I/O statistics.
-vmstat:
-                       Report virtual memory statistics.
-sar:
-                       Collect and report system activity information.
-htop:
-                       Interactive process viewer (requires installation).
-Process Control
+Command
 
-nohup [command] &:
-                       Run a command immune to hangups, with output to a non-tty.
-bg:
-                       Resume a suspended job in the background.
-fg:
-                       Bring a job to the foreground.
-Package Management (for various distributions)
+Description
 
-Debian/Ubuntu:
-                       apt-get [command] or apt [command]
-RedHat/CentOS/Fedora:
-                       yum [command] or dnf [command]
-Arch Linux:
-                       pacman -S [package]
-System Configuration
+su -
 
-sysctl -a:
-                       Display or set kernel parameters.
-systemctl [command]:
-                       Manage systemd services.
-journalctl:
-                       View and query systemd logs.
-Advanced File Operations
+Log in as the superuser (root) with root environment
 
-rsync -avz [source] [destination]:
-                       Synchronize files/directories between locations.
-dd if=[source] of=[destination] bs=[blocksize]:
-                       Convert and copy files.
-Networking and Security
+su -l <username>
 
-iptables -L:
-                       List IP tables rules.
-ufw [command]:
-                       Uncomplicated Firewall management (Ubuntu/Debian).
-ssh [user@host]:
-                       Securely connect to a remote machine via SSH.
-scp [source] [user@host:destination]:
-                       Securely copy files between hosts.
+Switch to a specific user account
+
+exit
+
+Exit current shell or log out of superuser session
+
+sudo <command>
+
+Execute a command with superuser (root) privileges
+
+useradd <username>
+
+Create a new user account
+
+usermod <options> <username>
+
+Modify user account properties
+
+passwd <username>
+
+Change or set a user's password
+
+groupadd <groupname>
+
+Create a new user group
+
+gpasswd -a <user> <group>
+
+Add a user to a specific group
+
+2. File & Directory Operations
+
+Command
+
+Description
+
+pwd
+
+Print working directory address
+
+ls
+
+List directory contents
+
+ls -l / ll
+
+List files/directories with detailed information
+
+cd <directory>
+
+Change working directory
+
+cd ..
+
+Navigate up one directory level
+
+mkdir <directory>
+
+Create a new directory
+
+mkdir -p dir1/dir2
+
+Create parent and nested child directories simultaneously
+
+rmdir <directory>
+
+Remove an empty directory
+
+touch <filename>
+
+Create a new empty file or update timestamp
+
+cp <source> <destination>
+
+Copy a file to another location
+
+cp -r <source_dir> <dest_dir>
+
+Recursively copy a directory and its contents
+
+mv <source> <destination>
+
+Move or rename files or directories
+
+rm <file>
+
+Remove/delete a file
+
+rm -rf <dir>
+
+Forcefully remove a directory and all its contents
+
+file <path>
+
+Determine the file type
+
+3. File Viewing & Editing
+
+Command
+
+Description
+
+cat <file>
+
+Display full contents of a file
+
+echo "text" > <file>
+
+Write text to a file (overwrites existing content)
+
+echo "text" >> <file>
+
+Append text to the end of an existing file
+
+more <file>
+
+View file content one screen at a time
+
+less <file>
+
+View file content with forward and backward navigation
+
+head <file>
+
+Display the first few lines of a file (default: 10 lines)
+
+tail <file>
+
+Display the last few lines of a file (default: 10 lines)
+
+nano <file>
+
+Create or edit a file using the Nano text editor
+
+vim <file>
+
+Create or edit a file using the Vim text editor
+
+zcat <file.gz>
+
+View contents of a compressed .gz file without uncompressing
+
+4. Permissions & Ownership
+
+Command
+
+Description
+
+chmod <permissions> <file>
+
+Change read, write, and execute permissions of a file
+
+chown <owner>:<group> <file>
+
+Change file owner and group
+
+chgrp <group> <file>
+
+Change the group ownership of a file
+
+5. Searching & Text Manipulation
+
+Command
+
+Description
+
+grep <pattern> <file>
+
+Search for matching text patterns within files
+
+find <directory> -name <filename>
+
+Search for files by name within a directory hierarchy
+
+locate <filename>
+
+Find files rapidly using a pre-indexed system database
+
+xargs <command>
+
+Build and execute command lines from standard input
+
+6. Archiving & Compression
+
+Command
+
+Description
+
+tar -cvf <archive.tar> <files>
+
+Create an uncompressed tarball archive
+
+tar -xvf <archive.tar>
+
+Extract files from a tarball archive
+
+gzip <file>
+
+Compress a file using Gzip format (.gz)
+
+gunzip <file.gz>
+
+Decompress a Gzip archive
+
+zip <archive.zip> <files>
+
+Create a ZIP archive
+
+unzip <archive.zip>
+
+Extract files from a ZIP archive
+
+rsync -avz <source> <destination>
+
+Synchronize files and directories locally or remotely
+
+7. System Information & Monitoring
+
+Command
+
+Description
+
+hostname
+
+Display system host name
+
+date
+
+Display or set system date and time
+
+uptime
+
+Show system running time, active users, and load averages
+
+df -h
+
+Display available disk space in human-readable format
+
+du -sh <directory>
+
+Display total disk usage of a specific directory
+
+top
+
+Dynamic, real-time view of running system processes
+
+htop
+
+Interactive, colorized process viewer (requires installation)
+
+iostat
+
+Report CPU statistics and input/output metrics for devices
+
+vmstat
+
+Report virtual memory, process, and system activity statistics
+
+sar
+
+Collect, view, and record system activity information
+
+8. Process Management & Control
+
+Command
+
+Description
+
+ps
+
+Display a snapshot of current active processes
+
+kill <PID>
+
+Terminate a process by Process ID (PID)
+
+killall <process_name>
+
+Terminate all processes matching a given name
+
+pkill <process_name>
+
+Send signals to processes based on name
+
+nohup <command> &
+
+Run a command immune to hangups in the background
+
+bg
+
+Resume a suspended job in the background
+
+fg
+
+Bring a background job into the foreground
+
+9. Networking & Remote Access
+
+Command
+
+Description
+
+ping <host>
+
+Test connectivity to a network host using ICMP
+
+wget <URL>
+
+Download files from the web via HTTP, HTTPS, or FTP
+
+ifconfig
+
+Display or configure network interface parameters (legacy)
+
+ip a / ip addr
+
+Show network interfaces and IP addresses
+
+nmcli
+
+Command-line tool for controlling NetworkManager
+
+netstat -tuln
+
+List listening sockets and ports (legacy)
+
+ss -tuln
+
+Display network socket connections and listening ports
+
+ssh <user>@<host>
+
+Securely connect to a remote server using SSH
+
+scp <source> <user>@<host>:<dest>
+
+Securely copy files between local and remote hosts
+
+iptables -L
+
+List active packet filtering rules for netfilter firewall
+
+ufw status
+
+Check status of Uncomplicated Firewall (Ubuntu/Debian)
+
+10. Disk Management & Filesystems
+
+Command
+
+Description
+
+fdisk -l
+
+List system partition tables
+
+mkfs -t <type> <device>
+
+Create a filesystem on a storage device/partition
+
+mount <device> <mount_point>
+
+Attach a device filesystem to the directory tree
+
+umount <mount_point>
+
+Detach a mounted filesystem
+
+dd if=<source> of=<dest> bs=<block>
+
+Low-level copy and conversion of raw data/images
+
+11. Package Management
+
+Package Manager
+
+Distributions
+
+Example Commands
+
+APT
+
+Debian, Ubuntu, Mint
+
+apt update / apt install <package>
+
+YUM
+
+RHEL, CentOS (Older)
+
+yum install <package>
+
+DNF
+
+Fedora, RHEL 8+
+
+dnf install <package>
+
+Pacman
+
+Arch Linux, Manjaro
+
+pacman -S <package>
+
+12. System Configuration & Services
+
+Command
+
+Description
+
+sysctl -a
+
+Display or modify kernel parameters at runtime
+
+systemctl <start|stop|status> <service>
+
+Control systemd system and service manager
+
+journalctl
+
+Query and view logs generated by systemd journal
+
+sudo reboot
+
+Restart the system
+
+sudo halt / shutdown -h now
+
+Power down the system immediately
+
+13. Terminal & Utility Shortcuts
+
+Command / Key
+
+Description
+
+man <command>
+
+Open full manual page for a command
+
+<command> --help
+
+Display quick help options for a command
+
+clear
+
+Clear the terminal screen
+
+Ctrl + L
+
+Terminal shortcut to clear screen
+
+Tab
+
+Auto-complete command or path name
